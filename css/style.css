@@ -340,7 +340,9 @@ h6 {
 }
 
 .about__img,
-.about__text {
+.about__text,
+.portfolio__text,
+.portfolio__img {
     width: calc(100% / 2 - 30px);
 }
 
@@ -356,19 +358,22 @@ h6 {
     min-height: 60rem;
 }
 
-.about__text {
+.about__text,
+.portfolio__text {
     display: flex;
     flex-direction: column;
     gap: var(--space-m);
 }
 
-.about__text ul {
+.about__text ul,
+.portfolio__text ul {
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
 }
 
-.about__text li {
+.about__text li,
+.portfolio__text li {
     display: flex;
     gap: var(--space-xs);
 }
@@ -549,7 +554,8 @@ h6 {
     gap: var(--space-s);
 }
 
-.reviews .section-title {
+.reviews .section-title,
+.plans .section-title {
     width: 30ch;
     text-align: center;
 }
@@ -588,6 +594,186 @@ h6 {
 .reviews__slider {
     display: flex !important;
     gap: var(--space-m);
+}
+
+/* Portfolio Section */
+
+.portfolio {
+    padding: var(--space-xl) 0;
+}
+
+.portfolio .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio__img {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+}
+
+.portfolio__img-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--main-border-radius);
+}
+
+.portfolio__img-wrapp {
+    position: relative;
+    max-width: 42rem;
+}
+
+.portfolio__img-detail {
+    background-color: var(--white-smoke);
+    border-radius: var(--main-border-radius);
+    padding: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    width: 36rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -16rem;
+}
+
+.portfolio__img-detail h5 {
+    color: var(--heading-color);
+}
+
+.portfolio__img-detail p {
+    padding-top: 1rem;
+    width: 22ch;
+}
+
+.portfolio__img-detail a {
+    padding-top: var(--space-s);
+    color: var(--secondary-color);
+    font-size: var(--accent-text);
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.portfolio__img-detail a img {
+    transition: var(--main-transition);
+}
+
+.portfolio__img-detail a:hover img {
+    transform: translateX(10px);
+}
+
+/* Plans Section */
+
+.plans {
+    padding: var(--space-xl) 0;
+    background-color: var(--white-smoke);
+}
+
+.plans .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plans .section-title {
+    padding-top: var(--space-s);
+}
+
+.plans__wrapp {
+    padding-top: var(--space-m);
+    display: flex;
+    gap: var(--space-s);
+    align-items: center;
+}
+
+.plans__item {
+    background-color: var(--white-color);
+    border-radius: var(--main-border-radius);
+    padding: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+}
+
+.plans__item-subtitle {
+    font-size: var(--accent-text);
+    font-weight: 700;
+    color: var(--placeholder-color);
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+}
+
+.plans__item-price {
+    font-size: var(--text-s);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: var(--space-s);
+}
+
+.plans__item-price span {
+    font-size: var(--h-3);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.plans__item ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.plans__item ul li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.plans__item_featured {
+    background-color: var(--primary-color);
+    padding: var(--space-l) var(--space-m);
+    position: relative;
+}
+
+.plans__item_featured p {
+    color: var(--white-overlay);
+}
+
+.plans__item_featured span {
+    color: var(--accent-color);
+}
+
+.plans__item-label {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 0px var(--main-border-radius);
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.plans__item-label p {
+    text-transform: uppercase;
+    font-size: var(--accent-text);
+    color: var(--white-color);
+    font-weight: 700;
+    padding: 1rem var(--space-s);
+}
+
+.plans__item_featured .main-btn {
+    color: var(--primary-color);
+}
+
+.plans__item_featured .main-btn:hover {
+    color: var(--white-color);
+}
+
+.plans__item_featured .main-btn:hover img {
+    filter: brightness(0) invert(1);
 }
 
 /* Footer */
