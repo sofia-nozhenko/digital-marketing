@@ -5,8 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Css -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
         <link rel="stylesheet" href="css/style.css" />
-
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -80,24 +84,24 @@
                     <nav class="header-nav__menu">
                         <ul>
                             <li>
-                                <a href=""> Home</a>
+                                <a href="#"> Home</a>
                             </li>
                             <li>
-                                <a href="">About us</a>
+                                <a href="#about">About us</a>
                             </li>
                             <li>
-                                <a href="">Our Services</a>
+                                <a href="#services">Our Services</a>
                             </li>
                             <li>
                                 <a href="">FAQS</a>
                             </li>
                             <li>
-                                <a href="">Reviews</a>
+                                <a href="#reviews">Reviews</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="header-nav__btns">
-                        <button class="main-btn">Contact Us</button>
+                        <a href="#contact" class="main-btn">Contact Us</a>
                         <button>
                             <img src="img/icons/menu.svg" alt="Menu" />
                         </button>
@@ -106,7 +110,7 @@
             </section>
         </header>
         <!-- Header ends -->
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="container">
                 <h1>
                     Take <span>your brand</span> to new heights with our digital
@@ -118,16 +122,16 @@
                     aliqua.
                 </p>
                 <div class="hero__btns">
-                    <button class="main-btn main-btn_light">
+                    <a href="#services" class="main-btn main-btn_light">
                         Our Services
-                    </button>
-                    <button class="main-btn main-btn_transparent">
+                    </a>
+                    <a href="#plans" class="main-btn main-btn_transparent">
                         Get a Quote
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section id="about" class="about">
             <div class="container">
                 <div class="about__img">
                     <img src="img/img-2.webp" alt="About" />
@@ -160,7 +164,7 @@
                 </div>
             </div>
         </section>
-        <section class="services">
+        <section id="services" class="services">
             <div class="services__head">
                 <div class="container">
                     <div class="services__text">
@@ -302,7 +306,7 @@
                 </div>
             </div>
         </section>
-        <section class="advantages">
+        <section id="advantages" class="advantages">
             <div class="container">
                 <div class="advantages__text">
                     <p class="section-subtitle">
@@ -353,12 +357,16 @@
                 </div>
             </div>
         </section>
-        <section class="reviews">
+        <section id="reviews" class="reviews">
             <div class="container">
-                <p class="section-subtitle">Client Success Stories</p>
-                <h2 class="section-title">
-                    our clients achieved remarkable digital marketing results
-                </h2>
+                <div class="reviews__text">
+                    <p class="section-subtitle">Client Success Stories</p>
+                    <h2 class="section-title">
+                        our clients achieved remarkable digital marketing
+                        results
+                    </h2>
+                </div>
+
                 <div class="reviews__slider">
                     <div class="reviews__slider-item">
                         <p class="reviews__slider-text">
@@ -399,10 +407,23 @@
                             </div>
                         </div>
                     </div>
+                    <div class="reviews__slider-item">
+                        <p class="reviews__slider-text">
+                            “ Sed ut perspiciatis unde omnis iste natus error
+                            sit voluptatem accusantium doloremque “
+                        </p>
+                        <div class="reviews__slider-info">
+                            <img src="img/testimonial-1.webp" alt="Review" />
+                            <div>
+                                <h5>Mrs. Samanta Smith</h5>
+                                <p class="section-subtitle">Customer</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section id="portfolio" class="portfolio">
             <div class="container">
                 <div class="portfolio__img">
                     <div class="portfolio__img-wrapp">
@@ -478,7 +499,7 @@
                 </div>
             </div>
         </section>
-        <section class="plans">
+        <section id="plans" class="plans">
             <div class="container">
                 <p class="section-subtitle">
                     Flexible Digital Marketing Packages
@@ -702,6 +723,130 @@
                 </div>
             </div>
         </section>
+        <section id="statistics" class="statistics">
+            <div class="container">
+                <div class="statistics__info">
+                    <p class="section-subtitle">Best #1 Services</p>
+                    <h2 class="section-title">In-Depth Digital Marketing</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                    </p>
+                    <img src="img/img-5.webp" alt="Marketing" />
+                </div>
+                <div class="statistics__video">
+                    <div class="statistics__video-wrapp">
+                        <img src="img/img-6.png" alt="Video" />
+                    </div>
+                    <div class="statistics__video-wrapp">
+                        <div class="statistics__video-info">
+                            <span>795+</span>
+                            <h5>Projects Done</h5>
+                        </div>
+                        <div class="statistics__video-item">
+                            <h4>Moneyback Guarantee</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="companies" class="companies">
+            <div class="companies__slider">
+                <div class="companies__slider-item">
+                    <img src="img/slider/slide-1.png" alt="Slide" />
+                </div>
+                <div class="companies__slider-item">
+                    <img src="img/slider/slide-2.png" alt="Slide" />
+                </div>
+                <div class="companies__slider-item">
+                    <img src="img/slider/slide-3.png" alt="Slide" />
+                </div>
+                <div class="companies__slider-item">
+                    <img src="img/slider/slide-4.png" alt="Slide" />
+                </div>
+                <div class="companies__slider-item">
+                    <img src="img/slider/slide-1.png" alt="Slide" />
+                </div>
+                <div class="companies__slider-item">
+                    <img src="img/slider/slide-2.png" alt="Slide" />
+                </div>
+                <div class="companies__slider-item">
+                    <img src="img/slider/slide-3.png" alt="Slide" />
+                </div>
+                <div class="companies__slider-item">
+                    <img src="img/slider/slide-4.png" alt="Slide" />
+                </div>
+                <div class="companies__slider-item">
+                    <img src="img/slider/slide-1.png" alt="Slide" />
+                </div>
+                <div class="companies__slider-item">
+                    <img src="img/slider/slide-2.png" alt="Slide" />
+                </div>
+                <div class="companies__slider-item">
+                    <img src="img/slider/slide-3.png" alt="Slide" />
+                </div>
+                <div class="companies__slider-item">
+                    <img src="img/slider/slide-4.png" alt="Slide" />
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact__img">
+                    <img src="img/img-6.webp" alt="Get in touch" />
+                </div>
+                <div class="contact__text">
+                    <p class="section-subtitle">Stay Tuned</p>
+                    <h2 class="section-title">Lets Get In Touch With Us</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                    </p>
+                    <div class="contact__text-info">
+                        <ul>
+                            <li>
+                                <img
+                                    src="img/icons/envelope-blue.svg"
+                                    alt="Envelope"
+                                />
+                                <a href="mailto:digital.marketing@mail.com"
+                                    >digital.marketing@mail.com</a
+                                >
+                            </li>
+                            <li>
+                                <img
+                                    src="img/icons/phone-blue.svg"
+                                    alt="Phone"
+                                />
+                                <a href="tel:+62 123 456 789"
+                                    >+62 123 456 789</a
+                                >
+                            </li>
+                            <li>
+                                <img
+                                    src="img/icons/clock-blue.svg"
+                                    alt="Clock"
+                                />
+                                <a href="#">08 AM - 10 PM</a>
+                            </li>
+                        </ul>
+                        <div class="contact__text-address">
+                            <h5>Head Office Address</h5>
+                            <p>
+                                Lumbung Hidup St. 425 East Java Madiun City 1234
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Footer starts -->
         <footer class="footer">
             <div class="container footer-container">
@@ -832,6 +977,11 @@
             </div>
         </footer>
         <!-- Footer ends -->
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script
+            type="text/javascript"
+            src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        ></script>
         <script src="js/main.js"></script>
     </body>
 </html>

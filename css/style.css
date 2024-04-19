@@ -342,7 +342,11 @@ h6 {
 .about__img,
 .about__text,
 .portfolio__text,
-.portfolio__img {
+.portfolio__img,
+.contact__text,
+.contact__img,
+.statistics__info,
+.statistics__video {
     width: calc(100% / 2 - 30px);
 }
 
@@ -359,7 +363,8 @@ h6 {
 }
 
 .about__text,
-.portfolio__text {
+.portfolio__text,
+.contact__text {
     display: flex;
     flex-direction: column;
     gap: var(--space-m);
@@ -546,7 +551,7 @@ h6 {
     background-color: var(--white-smoke);
 }
 
-.reviews .container {
+.reviews__text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -563,10 +568,11 @@ h6 {
 .reviews__slider-item {
     background-color: var(--white-color);
     padding: var(--space-m);
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     gap: var(--space-s);
     border-radius: var(--main-border-radius);
+    margin: 0 var(--space-s);
 }
 
 .reviews__slider-text {
@@ -592,8 +598,28 @@ h6 {
 }
 
 .reviews__slider {
-    display: flex !important;
-    gap: var(--space-m);
+    padding-top: var(--space-m);
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    padding-top: var(--space-s);
+    gap: var(--space-xs);
+}
+
+.slick-dots li button {
+    font-size: 0px;
+    background-color: var(--border-color);
+    width: 12px;
+    height: 12px;
+    border-radius: var(--main-border-radius);
+    transition: var(--main-transition);
+}
+
+.slick-dots .slick-active button{
+    width: 50px;
+    background-color: var(--primary-color);
 }
 
 /* Portfolio Section */
@@ -619,6 +645,7 @@ h6 {
     height: 100%;
     object-fit: cover;
     border-radius: var(--main-border-radius);
+    max-height: 28rem;
 }
 
 .portfolio__img-wrapp {
@@ -715,7 +742,8 @@ h6 {
     padding-top: var(--space-s);
 }
 
-.plans__item-price span {
+.plans__item-price span,
+.statistics__video-info span {
     font-size: var(--h-3);
     font-weight: 700;
     color: var(--primary-color);
@@ -774,6 +802,149 @@ h6 {
 
 .plans__item_featured .main-btn:hover img {
     filter: brightness(0) invert(1);
+}
+
+/* Statistics section */
+
+.statistics {
+    padding: var(--space-xl) 0;
+}
+
+.statistics .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statistics__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+}
+
+.statistics__info img {
+    width: 100%;
+    max-height: 25rem;
+    object-fit: cover;
+    border-radius: var(--main-border-radius);
+}
+
+.statistics__video {
+    display: flex;
+    justify-content: space-between;
+}
+
+.statistics__video-wrapp {
+    border-radius: var(--main-border-radius);
+    overflow: hidden;
+    width: calc(100% / 2 - 15px);
+}
+
+.statistics__video-wrapp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.statistics__video-info {
+    padding: calc(var(--space-xs) * 2);
+}
+
+.statistics__video-info h5 {
+    color: var(--heading-color);
+    padding-top: var(--space-xs);
+}
+
+.statistics__video-item {
+    background-color: var(--primary-color);
+    padding: calc(var(--space-xs) * 2);
+    border-radius: var(--main-border-radius);
+}
+
+.statistics__video-item h4 {
+    color: var(--white-color);
+}
+
+.statistics__video-item p {
+    color: var(--white-overlay);
+    padding-top: var(--space-xs);
+}
+
+/* Companies Section */
+
+.companies {
+    background-color: var(--primary-color);
+    padding: var(--space-s) 0;
+}
+
+.companies__slider {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.companies__slider-item {
+    display: flex !important;
+    align-items: center;
+    width: fit-content;
+    height: 4.8rem !important;
+}
+
+.companies__slider-item img {
+    opacity: 0.5;
+    object-fit: cover;
+}
+
+/* Contact us section */
+
+.contact {
+    padding: var(--space-xl) 0;
+}
+
+.contact .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact__img {
+    border-radius: var(--main-border-radius);
+    overflow: hidden;
+    max-height: 44rem;
+}
+
+.contact__img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    max-height: 44rem;
+}
+
+.contact__text-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact__text-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.contact__text-info ul li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+}
+
+.contact__text-address {
+    width: 21ch;
+}
+
+.contact__text-address h5 {
+    color: var(--heading-color);
 }
 
 /* Footer */
